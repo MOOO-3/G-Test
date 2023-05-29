@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #eae9e9;
+    color: black;
+}
+
+.dark-mode {
+    background-color: #2c2d2d;
+    color: white;
+}
+
+.All-head {
+    text-align: center;
+    font-size: 18px;
+    /* width: 85%; */
+}
+
+.All-text {
+    margin: 1% 2% 2% 2%;
+    font-size: 20px;
+    cursor: default;
+}
+
+.image-Gosho-Aoyama {
+    margin: -2% 1% 1% 2%;
+    width: 15%;
+    border: solid black;
+    border-radius: 10px;
+    display: inline-block;
+    cursor: no-drop;
+}
+
+.btn-mode {
+    background-color: rgb(72, 226, 226);
+    padding: 1% 1% 1% 1%;
+    border-radius: 7px solid;
+    text-align: center;
+    margin: 2% 0% 0% 86%;
+    width: 12%;
+    font-size: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    cursor: pointer;
+}

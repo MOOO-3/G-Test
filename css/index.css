@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Shantell Sans', cursive;
+}
+
+
+
+body {
+    /* background: #457fb4; */
+    display: flex;
+    height: 100vh;
+    background-color: #272727;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+div.container {
+    font-family: Raleway;
+    margin: 10px auto;
+    padding: 2em 6em 0em 2em;
+    text-align: center;
+}
+
+div.container a {
+    color: #006eff;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 11px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+
+/* Border from Y to X  */
+div.borderYtoX a:before,
+div.borderYtoX a:after {
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+    width: 2px;
+    content: '';
+    background: #ff0000;
+    transition: all 0.3s;
+}
+
+div.borderYtoX a:before {
+    left: 0px;
+    top: 0px;
+}
+
+div.borderYtoX a:after {
+    right: 0px;
+    bottom: 0px;
+}
+
+div.borderYtoX a:hover:before,
+div.borderYtoX a:hover:after {
+    opacity: 1;
+    height: 2px;
+    width: 100%;
+}
+
+
+
+
+
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background: blue; */
+    border-radius: 0 0 30px 30px;
+    color: white;
+    text-align: center;
+
+    /*Define a height for NavBar*/
+    height: 80px;
+    transition: 0.5s;
+    /*and a transition time for a smooth appearence*/
+
+}
+
+
+.list-container {
+    margin: auto;
+    display: flex;
+    margin-top: 20%;
+
+}
+
+.main-container {
+    width: 270px;
+    height: 390px;
+    position: relative;
+    margin: 0 20px;
+}
+
+.img-size {
+    width: 230px;
+    height: 350px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 9999;
+}
+
+
+
+
+.poster-container {
+    width: 230px;
+    height: 390px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 9999;
+}
+
+
+.parents-All {
+    margin: 2%;
+    margin-top: 5%;
+}
+
+.All-poster {
+    width: 100%;
+    height: 340px;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+}
+
+.Miracolous-container {
+    /* background: url(https://cdn.discordapp.com/attachments/1070061633994506321/1079484307720130560/download_4.png); */
+    background: rgb(60, 153, 210);
+    background: linear-gradient(180deg, rgba(60, 153, 210, 1) 0%, rgba(215, 115, 161, 1) 73%, rgba(28, 28, 28, 1) 93%, rgba(28, 28, 28, 1) 100%);
+    width: 270px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+}
+
+
+
+.main-container:hover .Miracolous-container {
+    opacity: 1;
+    animation: bounceIn 0.6s linear;
+}
+
+.Miracolous__content {
+    color: #ff6464;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+
+
+/* .Gumball-poster {
+    width: 100%;
+    height: 340px;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+} */
+
+.Gumball-ticket-container {
+    /* background: url(https://cdn.discordapp.com/attachments/1070061633994506321/1095125851508588656/image.jpg); */
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 8%, rgba(0, 236, 233, 1) 37%, rgba(255, 111, 0, 1) 56%, rgba(0, 0, 0, 1) 91%);
+    width: 270px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+}
+
+.main-container:hover .Gumball-ticket-container {
+    opacity: 1;
+    animation: bounceIn 0.6s linear;
+}
+
+.Gumball__content {
+    color: #00ece9;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+.Angelo-ticket-container {
+    /* background: url(https://cdn.discordapp.com/attachments/1070061633994506321/1079482311021690960/download_2.png); */
+    background: rgb(243, 209, 102);
+    background: linear-gradient(90deg, rgba(243, 209, 102, 1) 0%, rgba(81, 94, 106, 0.9641106442577031) 22%, rgba(81, 94, 106, 0.9697128851540616) 77%, rgba(207, 181, 130, 1) 100%);
+    width: 270px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+}
+
+
+.main-container:hover .Angelo-ticket-container {
+    opacity: 1;
+    animation: bounceIn 0.6s linear;
+}
+
+.Angelo__content {
+    color: #f89d06;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+
+.one-piece-ticket-container {
+    /* background: url(https://cdn.discordapp.com/attachments/1070061633994506321/1079481352627429376/download_1.png); */
+    background: rgb(207, 107, 47);
+    background: rgb(207, 107, 47);
+    background: rgb(207, 107, 47);
+    background: rgb(207, 107, 47);
+    background: linear-gradient(90deg, rgba(207, 107, 47, 1) 0%, rgba(59, 51, 39, 1) 31%, rgba(55, 47, 36, 1) 69%, rgba(207, 107, 47, 1) 100%);
+    width: 270px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+}
+
+.main-container:hover .one-piece-ticket-container {
+    opacity: 1;
+    animation: bounceIn 0.6s linear;
+}
+
+.One__Piece__content {
+    color: #e94a00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+
+
+.Detective-Conan-ticket-container {
+    /* background: url(https://cdn.discordapp.com/attachments/1070061633994506321/1079481772498231356/Z_2.png); */
+    background: rgb(73, 64, 83);
+    background: linear-gradient(89deg, rgba(73, 64, 83, 1) 0%, rgba(72, 60, 80, 1) 99%);
+    width: 270px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+}
+
+.main-container:hover .Detective-Conan-ticket-container {
+    opacity: 1;
+    animation: bounceIn 0.6s linear;
+}
+
+.Conan__content {
+    color: rgb(53, 97, 255);
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+
+.Ninjago-ticket-container {
+    /* background: url(https://cdn.discordapp.com/attachments/1070061633994506321/1079481772498231356/Z_2.png); */
+    background: rgb(250, 255, 248);
+    background: linear-gradient(166deg, rgba(250, 255, 248, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    width: 270px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+}
+
+.main-container:hover .Ninjago-ticket-container {
+    opacity: 1;
+    animation: bounceIn 0.6s linear;
+}
+
+.Ninjago__content {
+    color: rgb(53, 97, 255);
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+.Adventure-Time-ticket-container {
+    background: rgb(98, 216, 254);
+    background: linear-gradient(180deg, rgba(98, 216, 254, 1) 0%, rgba(128, 220, 75, 1) 100%);
+    width: 270px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+}
+
+.main-container:hover .Adventure-Time-ticket-container {
+    opacity: 1;
+    animation: bounceIn 0.6s linear;
+}
+
+.Adventure-Time_content {
+    color: rgb(53, 97, 255);
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+
+.Les-Misérables-ticket-container {
+    background: rgb(40, 110, 184);
+    background: linear-gradient(143deg, rgba(40, 110, 184, 1) 3%, rgba(133, 130, 104, 1) 18%, rgba(167, 163, 131, 1) 70%, rgba(76, 123, 124, 1) 89%);
+    width: 270px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+}
+
+.main-container:hover .Les-Misérables-ticket-container {
+    opacity: 1;
+    animation: bounceIn 0.6s linear;
+}
+
+.Les-Misérables_content {
+    color: rgb(53, 97, 255);
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+@keyframes bounceIn {
+
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    20% {
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9);
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.01, 1.01, 1.01);
+        transform: scale3d(1.01, 1.01, 1.01);
+    }
+
+    80% {
+        -webkit-transform: scale3d(0.97, 0.97, 0.97);
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+/* @keyframes bounce {
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+} */
+
+.ticket__content {
+    color: wheat;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+.ticket__movie-title {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.ticket__movie-slogan {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.ticket__current-price {
+    color: #69c982;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.ticket__old-price {
+    color: #999;
+    text-decoration: line-through;
+    margin-bottom: 10px;
+}
+
+.ticket__buy-btn {
+    cursor: pointer;
+    width: 100%;
+    background: #2f2f2f;
+    color: white;
+    padding: 15px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+/* 
+.link {
+    cursor: pointer;
+    width: 100%;
+    background: #2f2f2f;
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+} */
